@@ -1,0 +1,19 @@
+.heading {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  border-bottom: 3px solid green;
+}
+
+.nav {
+  display: flex;
+  gap: 100px;
+  margin-right: 50px;
+}
+.nav li {
+  font-size: 2rem;
+  list-style-type: none;
+}
