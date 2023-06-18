@@ -5,7 +5,8 @@
   position: fixed;
   top: 0;
   width: 100%;
-  border-bottom: 3px solid green;
+  outline: 3px solid green;
+  height: 100px;
 }
 
 .nav {

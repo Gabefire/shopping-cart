@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ShoppingCart from "./shopping-cart";
 import HomePage from "./home-page";
@@ -16,7 +16,7 @@ import newBalanceFresh from "../assets/new-balance-fresh-form-12.jpg";
 import nikePegasus from "../assets/nike-pegasus-39.jpg";
 
 const App = () => {
-  const [store, setStore] = useState([
+  const store = [
     { shoe: hokaClifton, name: "HOKA Clifton 9", price: "$150" },
     {
       shoe: asicsKayano,
@@ -41,7 +41,7 @@ const App = () => {
     },
     { shoe: nikePegasus, name: "Nike Pegasus 39", price: "$60" },
     { shoe: hokaBondi, name: "HOKA Bondi 8", price: "$100" },
-  ]);
+  ];
 
   const [cart, setCart] = useState([]);
 
@@ -67,10 +67,13 @@ const App = () => {
 
     setCart(tempCart);
   };
+  const showShoppingCart = () => {
+    setDisplayShoppingCart((prevDisplay) => !prevDisplay);
+  };
 
   return (
     <BrowserRouter>
-      <Heading />
+      <Heading displayCart={showShoppingCart} />
       <div className="main">
         <Routes>
           <Route path="/" element={<HomePage />} />
@@ -79,7 +82,7 @@ const App = () => {
             element={<Store store={store} addCartItem={addCartItem} />}
           />
         </Routes>
-        {displayShoppingCart ? <ShoppingCart store={store} /> : null}
+        {displayShoppingCart ? <ShoppingCart cart={cart} /> : null}
       </div>
     </BrowserRouter>
   );
