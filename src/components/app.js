@@ -17,30 +17,33 @@ import nikePegasus from "../assets/nike-pegasus-39.jpg";
 
 const App = () => {
   const [store, setStore] = useState([
-    { shoe: hokaClifton, name: "HOKA Clifton 9", price: "$150", amount: 0 },
+    { shoe: hokaClifton, name: "HOKA Clifton 9", price: "$150" },
     {
       shoe: asicsKayano,
       name: "Asics Gel Kayano 29",
       price: "$160",
-      amount: 0,
     },
-    { shoe: brooksGhost, name: "Brooks Ghost 14", price: "$140", amount: 0 },
+    { shoe: brooksGhost, name: "Brooks Ghost 14", price: "$140" },
     {
       shoe: brooksLaunch,
       name: "Brooks Launch GTS-9",
       price: "$130",
-      amount: 0,
     },
-    { shoe: mizunoWave, name: "Mizuno Wave Rider 26", price: "$90", amount: 0 },
+    {
+      shoe: mizunoWave,
+      name: "Mizuno Wave Rider 26",
+      price: "$90",
+    },
     {
       shoe: newBalanceFresh,
       name: "New Balance Fresh Form 12",
       price: "$110",
-      amount: 0,
     },
-    { shoe: nikePegasus, name: "Nike Pegasus 39", price: "$60", amount: 0 },
-    { shoe: hokaBondi, name: "HOKA Bondi 8", price: "$100", amount: 0 },
+    { shoe: nikePegasus, name: "Nike Pegasus 39", price: "$60" },
+    { shoe: hokaBondi, name: "HOKA Bondi 8", price: "$100" },
   ]);
+
+  const [cart, setCart] = useState([]);
 
   const [displayShoppingCart, setDisplayShoppingCart] = useState(false);
 
@@ -48,8 +51,21 @@ const App = () => {
     const index = e.target.id.split("-")[1];
     const tempStore = [...store];
     const shoe = tempStore[index];
-    shoe.amount += 1;
-    setStore(tempStore);
+    const tempCart = [...cart];
+    const results = tempCart.find((element) => {
+      if (element.name === shoe.name) {
+        return true;
+      }
+      return false;
+    });
+    if (!results) {
+      shoe.amount = 1;
+      tempCart.push(shoe);
+    } else {
+      results.amount += 1;
+    }
+
+    setCart(tempCart);
   };
 
   return (
