@@ -41,12 +41,15 @@ const App = () => {
     { shoe: nikePegasus, name: "Nike Pegasus 39", price: "$60", amount: 0 },
     { shoe: hokaBondi, name: "HOKA Bondi 8", price: "$100", amount: 0 },
   ]);
-  const [cart, setCart] = useState([]);
-  const [displayShoppingCart, setDisplayShoppingCart] = useState(false);
-  const [amountCart, setAmountCart] = useState(0);
 
-  const addCartItem = () => {
-    console.log("item added");
+  const [displayShoppingCart, setDisplayShoppingCart] = useState(false);
+
+  const addCartItem = (e) => {
+    const index = e.target.id.split("-")[1];
+    const tempStore = [...store];
+    const shoe = tempStore[index];
+    shoe.amount += 1;
+    setStore(tempStore);
   };
 
   return (
@@ -57,12 +60,10 @@ const App = () => {
           <Route path="/" element={<HomePage />} />
           <Route
             path="/store"
-            element={
-              <Store store={store} cart={cart} addCartItem={addCartItem} />
-            }
+            element={<Store store={store} addCartItem={addCartItem} />}
           />
         </Routes>
-        <ShoppingCart />
+        {displayShoppingCart ? <ShoppingCart store={store} /> : null}
       </div>
     </BrowserRouter>
   );
