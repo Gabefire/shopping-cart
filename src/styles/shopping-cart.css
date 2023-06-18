@@ -1,0 +1,7 @@
+.shopping-cart {
+  visibility: hidden;
+  position: fixed;
+  right: 0;
+  background-color: white;
+  border-left: 2px solid black;
+}

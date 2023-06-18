@@ -1,4 +1,10 @@
-import "../styles/store.css";
+import React, { useState } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import ShoppingCart from "./shopping-cart";
+import HomePage from "./home-page";
+import Store from "./store";
+import Heading from "./header";
+import "../styles/route-switch.css";
 
 import hokaBondi from "../assets/hoka-bondi-8.jpg";
 import hokaClifton from "../assets/hoka-clifton-9.jpg";
@@ -9,7 +15,7 @@ import mizunoWave from "../assets/mizuno-wave-rider-26.jpg";
 import newBalanceFresh from "../assets/new-balance-fresh-form-12.jpg";
 import nikePegasus from "../assets/nike-pegasus-39.jpg";
 
-const Store = ({ store, cart, addCartItem }) => {
+const App = () => {
   const [store, setStore] = useState([
     { shoe: hokaClifton, name: "HOKA Clifton 9", price: "$150", amount: 0 },
     {
@@ -35,24 +41,31 @@ const Store = ({ store, cart, addCartItem }) => {
     { shoe: nikePegasus, name: "Nike Pegasus 39", price: "$60", amount: 0 },
     { shoe: hokaBondi, name: "HOKA Bondi 8", price: "$100", amount: 0 },
   ]);
+  const [cart, setCart] = useState([]);
+  const [displayShoppingCart, setDisplayShoppingCart] = useState(false);
+  const [amountCart, setAmountCart] = useState(0);
+
+  const addCartItem = () => {
+    console.log("item added");
+  };
+
   return (
-    <div className="cards">
-      {store.map((item, index) => {
-        return (
-          <div className="card" key={`card-${index}`}>
-            <img src={item.shoe} alt={item.name} />
-            <div className="item-text">
-              <div className="price">{item.price}</div>
-              <div className="name">{item.name}</div>
-            </div>
-            <button onClick={addCartItem} id={`card-${index}`}>
-              Add to Cart
-            </button>
-          </div>
-        );
-      })}
-    </div>
+    <BrowserRouter>
+      <Heading />
+      <div className="main">
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route
+            path="/store"
+            element={
+              <Store store={store} cart={cart} addCartItem={addCartItem} />
+            }
+          />
+        </Routes>
+        <ShoppingCart />
+      </div>
+    </BrowserRouter>
   );
 };
 
-export default Store;
+export default App;
