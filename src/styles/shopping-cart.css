@@ -20,3 +20,19 @@
 .cart-img {
   width: 70%;
 }
+
+.cart-input-container {
+  display: flex;
+  gap: 10px;
+}
+
+.quantity-container {
+  display: flex;
+  gap: 5px;
+  font-size: 1.2rem;
+}
+
+.increase,
+.decrease {
+  cursor: pointer;
+}
