@@ -12,7 +12,7 @@ describe("Header Component", () => {
     const headingButton = screen.getByRole("button", { name: /Cart/i });
     await act(() => user.click(headingButton));
     const shoppingCart = screen.getByRole("heading", {
-      name: /Shopping Cart/i,
+      name: /Cart is Empty/i,
     });
     expect(shoppingCart).toBeInTheDocument();
     await act(() => user.click(headingButton));

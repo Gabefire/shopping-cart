@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ShoppingCart from "./shopping-cart";
 import HomePage from "./home-page";
@@ -67,8 +67,37 @@ const App = () => {
 
     setCart(tempCart);
   };
+
   const showShoppingCart = () => {
     setDisplayShoppingCart((prevDisplay) => !prevDisplay);
+  };
+
+  const removeItem = (e) => {
+    e.preventDefault();
+    const index = e.target.id.split("-")[2];
+    const tempCart = [...cart];
+    tempCart.splice(index, 1);
+    setCart(tempCart);
+  };
+
+  const addQuantity = (e) => {
+    e.preventDefault();
+    const index = e.target.id.split("-")[1];
+    const tempCart = [...cart];
+    tempCart[index].amount += 1;
+    setCart(tempCart);
+  };
+
+  const decreaseQuantity = (e) => {
+    e.preventDefault();
+    const index = e.target.id.split("-")[1];
+    const tempCart = [...cart];
+    tempCart[index].amount -= 1;
+    if (tempCart[index].amount === 0) {
+      removeItem(e);
+    } else {
+      setCart(tempCart);
+    }
   };
 
   return (
@@ -82,7 +111,14 @@ const App = () => {
             element={<Store store={store} addCartItem={addCartItem} />}
           />
         </Routes>
-        {displayShoppingCart ? <ShoppingCart cart={cart} /> : null}
+        {displayShoppingCart ? (
+          <ShoppingCart
+            cart={cart}
+            addQuantity={addQuantity}
+            decreaseQuantity={decreaseQuantity}
+            removeItem={removeItem}
+          />
+        ) : null}
       </div>
     </BrowserRouter>
   );

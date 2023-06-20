@@ -1,4 +1,5 @@
 .shopping-cart {
+  margin: 0;
   position: fixed;
   overflow: scroll;
   display: flex;
@@ -8,7 +9,12 @@
   background-color: white;
   border-left: 2px solid black;
   width: 400px;
-  height: 100%;
+  height: calc(100vh - 90px);
+  overflow-y: scroll;
+}
+
+.shopping-cart h2 {
+  margin: 0;
 }
 
 .item {
