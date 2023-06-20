@@ -10,6 +10,9 @@ const ShoppingCart = ({ cart, addQuantity, decreaseQuantity, removeItem }) => {
             <fieldset className="item" key={`cart-item-${index}`}>
               <img className="cart-img" src={element.shoe} alt={element.name} />
               <div className="shoe-name-cart">{element.name}</div>
+              <div className="shoe-amount">
+                {`$${+element.amount * +element.price.slice(1)}`}
+              </div>
               <div className="cart-input-container">
                 <div className="quantity-container">
                   <button
@@ -38,25 +41,24 @@ const ShoppingCart = ({ cart, addQuantity, decreaseQuantity, removeItem }) => {
                 >
                   Delete
                 </button>
-                <div className="shoe-amount">
-                  {`$${+element.amount * +element.price.slice(1)}`}
-                </div>
               </div>
             </fieldset>
           );
         })}
-        <div aria-label="total amount" className="total">
-          Total:
-          {` $${cart.reduce((prev, current) => {
-            return prev + Number(current.price.slice(1) * current.amount);
-          }, 0)}`}
+        <div className="footer">
+          <div aria-label="total amount" className="total">
+            Total:
+            {` $${cart.reduce((prev, current) => {
+              return prev + Number(current.price.slice(1) * current.amount);
+            }, 0)}`}
+          </div>
+          <input
+            type="submit"
+            value="Checkout"
+            className="checkout-button"
+            onClick={(e) => e.preventDefault()}
+          />
         </div>
-        <input
-          type="submit"
-          value="Checkout"
-          className="checkout-button"
-          onClick={(e) => e.preventDefault()}
-        />
       </form>
     );
   };

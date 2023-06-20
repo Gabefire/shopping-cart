@@ -12,13 +12,16 @@ const Store = ({ store, addCartItem }) => {
               <div className="price">{item.price}</div>
               <div className="name">{item.name}</div>
             </div>
-            <button
-              onClick={addCartItem}
-              aria-label={`add ${item.name}`}
-              id={`card-${index}`}
-            >
-              Add to Cart
-            </button>
+            <div className="add-item">
+              <button
+                className="add-item-button"
+                onClick={addCartItem}
+                aria-label={`add ${item.name}`}
+                id={`card-${index}`}
+              >
+                Add to Cart
+              </button>
+            </div>
           </div>
         );
       })}

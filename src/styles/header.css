@@ -1,12 +1,12 @@
 .heading {
   display: flex;
   justify-content: space-between;
-  background-color: white;
+  background-color: rgb(228, 227, 227);
   position: fixed;
   top: 0;
   width: 100%;
-  outline: 3px solid green;
   height: 100px;
+  z-index: 2;
 }
 
 .nav {

@@ -3,13 +3,17 @@
   grid-template-columns: 1fr 1fr;
   width: 100%;
   gap: 90px;
+  margin-top: 30px;
   margin-left: 60px;
   margin-right: 60px;
   margin-bottom: 60px;
 }
 
 .card {
+  border: 2px solid rgb(228, 227, 227);
   width: 70%;
+  border-radius: 10px;
+  padding: 40px;
   display: flex;
   flex-direction: column;
   cursor: pointer;
@@ -26,4 +30,8 @@
   position: relative;
   top: 0;
   font-size: 2rem;
+}
+
+.add-item {
+  width: 100%;
 }
