@@ -1,20 +1,22 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "../styles/header.css";
 
-const Heading = ({ displayCart }) => {
+const Heading = ({ displayCart, cartAmount }) => {
   return (
     <div className="heading" key="heading">
-      <h1>Running Shoes</h1>
+      <h1 className="title">Running Shoes</h1>
       <nav>
         <ul className="nav">
           <li>
-            <Link to="/">Home</Link>
+            <NavLink to="/">Home</NavLink>
           </li>
           <li>
-            <Link to="/store">Store</Link>
+            <NavLink to="/store">Store</NavLink>
           </li>
           <li>
-            <button onClick={displayCart}>Cart</button>
+            <button onClick={displayCart} className="header-button">
+              Cart {cartAmount}
+            </button>
           </li>
         </ul>
       </nav>

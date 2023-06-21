@@ -1,5 +1,5 @@
 .shopping-cart {
-  margin: 0;
+  bottom: 0;
   position: fixed;
   display: flex;
   flex-direction: column;

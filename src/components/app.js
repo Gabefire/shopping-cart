@@ -4,7 +4,7 @@ import ShoppingCart from "./shopping-cart";
 import HomePage from "./home-page";
 import Store from "./store";
 import Heading from "./header";
-import "../styles/route-switch.css";
+import "../styles/app.css";
 
 import hokaBondi from "../assets/hoka-bondi-8.jpg";
 import hokaClifton from "../assets/hoka-clifton-9.jpg";
@@ -68,7 +68,8 @@ const App = () => {
     setCart(tempCart);
   };
 
-  const showShoppingCart = () => {
+  const showShoppingCart = (e) => {
+    e.target.classList.toggle("active");
     setDisplayShoppingCart((prevDisplay) => !prevDisplay);
   };
 
@@ -102,7 +103,10 @@ const App = () => {
 
   return (
     <BrowserRouter>
-      <Heading displayCart={showShoppingCart} />
+      <Heading
+        displayCart={showShoppingCart}
+        cartAmount={cart.reduce((prev, current) => prev + current.amount, 0)}
+      />
       <div className="main">
         <Routes>
           <Route path="/" element={<HomePage />} />
