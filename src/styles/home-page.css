@@ -1,0 +1,48 @@
+.home-page {
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  margin-top: 200px;
+  width: 100%;
+}
+
+.home-page-quote,
+.home-page-p {
+  text-align: center;
+  width: 40%;
+}
+
+.home-page-quote {
+  font-size: 1.7rem;
+}
+
+.home-page-p {
+  font-size: 1.3rem;
+}
+
+.home-page button {
+  width: 15%;
+  height: 50px;
+  font-size: 2rem;
+  border: 5px solid black;
+  background-color: transparent;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.home-page button:hover {
+  background-color: black;
+  color: white;
+}
+
+#video-home-page {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: 0;
+}
