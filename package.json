@@ -10,7 +10,9 @@
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.13.0",
     "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -37,6 +39,8 @@
     ]
   },
   "devDependencies": {
-    "@babel/plugin-transform-private-property-in-object": "^7.22.5"
-  }
+    "@babel/plugin-transform-private-property-in-object": "^7.22.5",
+    "gh-pages": "^5.0.0"
+  },
+  "homepage": "https://github.com/Gabefire/shopping-cart"
 }
