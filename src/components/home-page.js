@@ -1,8 +1,10 @@
 import "../styles/home-page.css";
 import running from "../assets/running.mp4";
 import runningPic from "../assets/poster.jpg";
+import { useNavigate } from "react-router-dom";
 
-const HomePage = () => {
+const HomePage = ({ displayStore }) => {
+  const navigate = useNavigate();
   return (
     <>
       <video id="video-home-page" autoPlay loop muted>
@@ -16,7 +18,13 @@ const HomePage = () => {
           elit. Sed nunc neque, fringilla eget aliquet quis, luctus at nunc.
           Nullam venenatis mauris ultricies augue blandit consectetur.{" "}
         </p>
-        <button>Shop Now</button>
+        <button
+          onClick={() => {
+            navigate("/store");
+          }}
+        >
+          Shop Now
+        </button>
       </div>
     </>
   );
