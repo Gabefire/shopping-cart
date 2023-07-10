@@ -98,6 +98,7 @@ describe("Shopping Cart Component", () => {
       name: "Delete Nike Pegasus 39",
     });
     await user.click(deleteButton);
+
     expect(fakeCart.length).toBe(1);
   });
 });
