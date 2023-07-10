@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/Gabefire/shopping-cart/static/css/main.f6f4b4ee.css",
-    "main.js": "/Gabefire/shopping-cart/static/js/main.04ab15ff.js",
-    "static/media/running.mp4": "/Gabefire/shopping-cart/static/media/running.2fc36e76f753a839c724.mp4",
-    "static/media/poster.jpg": "/Gabefire/shopping-cart/static/media/poster.14bd4257705cdb0f4c69.jpg",
-    "static/media/hoka-clifton-9.jpg": "/Gabefire/shopping-cart/static/media/hoka-clifton-9.f59bfe966f627d40605f.jpg",
-    "static/media/asics-gel-kayano-29.jpg": "/Gabefire/shopping-cart/static/media/asics-gel-kayano-29.f333b61e27d04bf1073f.jpg",
-    "static/media/mizuno-wave-rider-26.jpg": "/Gabefire/shopping-cart/static/media/mizuno-wave-rider-26.6bc627334e5e75f306e8.jpg",
-    "static/media/new-balance-fresh-form-12.jpg": "/Gabefire/shopping-cart/static/media/new-balance-fresh-form-12.94f68af0170e7d2d89c8.jpg",
-    "static/media/brooks-ghost-14.jpg": "/Gabefire/shopping-cart/static/media/brooks-ghost-14.f49962e842afae1db5c7.jpg",
-    "static/media/hoka-bondi-8.jpg": "/Gabefire/shopping-cart/static/media/hoka-bondi-8.a21c7bb86218b3e8caad.jpg",
-    "static/media/brooks-launch-gts-9.jpg": "/Gabefire/shopping-cart/static/media/brooks-launch-gts-9.1c5540b406eca5314d10.jpg",
-    "static/media/nike-pegasus-39.jpg": "/Gabefire/shopping-cart/static/media/nike-pegasus-39.ce86d40d7e01b61bc55f.jpg",
-    "index.html": "/Gabefire/shopping-cart/index.html",
-    "main.f6f4b4ee.css.map": "/Gabefire/shopping-cart/static/css/main.f6f4b4ee.css.map",
-    "main.04ab15ff.js.map": "/Gabefire/shopping-cart/static/js/main.04ab15ff.js.map"
+    "main.css": "/shopping-cart/static/css/main.f6f4b4ee.css",
+    "main.js": "/shopping-cart/static/js/main.0303fac5.js",
+    "static/media/running.mp4": "/shopping-cart/static/media/running.2fc36e76f753a839c724.mp4",
+    "static/media/poster.jpg": "/shopping-cart/static/media/poster.14bd4257705cdb0f4c69.jpg",
+    "static/media/hoka-clifton-9.jpg": "/shopping-cart/static/media/hoka-clifton-9.f59bfe966f627d40605f.jpg",
+    "static/media/asics-gel-kayano-29.jpg": "/shopping-cart/static/media/asics-gel-kayano-29.f333b61e27d04bf1073f.jpg",
+    "static/media/mizuno-wave-rider-26.jpg": "/shopping-cart/static/media/mizuno-wave-rider-26.6bc627334e5e75f306e8.jpg",
+    "static/media/new-balance-fresh-form-12.jpg": "/shopping-cart/static/media/new-balance-fresh-form-12.94f68af0170e7d2d89c8.jpg",
+    "static/media/brooks-ghost-14.jpg": "/shopping-cart/static/media/brooks-ghost-14.f49962e842afae1db5c7.jpg",
+    "static/media/hoka-bondi-8.jpg": "/shopping-cart/static/media/hoka-bondi-8.a21c7bb86218b3e8caad.jpg",
+    "static/media/brooks-launch-gts-9.jpg": "/shopping-cart/static/media/brooks-launch-gts-9.1c5540b406eca5314d10.jpg",
+    "static/media/nike-pegasus-39.jpg": "/shopping-cart/static/media/nike-pegasus-39.ce86d40d7e01b61bc55f.jpg",
+    "index.html": "/shopping-cart/index.html",
+    "main.f6f4b4ee.css.map": "/shopping-cart/static/css/main.f6f4b4ee.css.map",
+    "main.0303fac5.js.map": "/shopping-cart/static/js/main.0303fac5.js.map"
   },
   "entrypoints": [
     "static/css/main.f6f4b4ee.css",
-    "static/js/main.04ab15ff.js"
+    "static/js/main.0303fac5.js"
   ]
 }
