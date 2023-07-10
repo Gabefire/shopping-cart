@@ -42,5 +42,5 @@
     "@babel/plugin-transform-private-property-in-object": "^7.22.5",
     "gh-pages": "^5.0.0"
   },
-  "homepage": "https://github.com/Gabefire/shopping-cart"
+  "homepage": "https://gabefire.github.io/shopping-cart/"
 }
