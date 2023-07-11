@@ -8,7 +8,7 @@ const Heading = ({ displayCart, cartAmount }) => {
       <nav>
         <ul className="nav">
           <li>
-            <NavLink to="/shopping-cart">Home</NavLink>
+            <NavLink to="/shopping-cart/">Home</NavLink>
           </li>
           <li>
             <NavLink to="/shopping-cart/store">Store</NavLink>

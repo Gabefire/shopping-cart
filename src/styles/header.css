@@ -26,10 +26,6 @@
   text-decoration: none;
 }
 
-.nav li a.active {
-  color: green;
-}
-
 .header-button {
   cursor: pointer;
   font-family: inherit;
