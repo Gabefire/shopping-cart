@@ -109,9 +109,9 @@ const App = () => {
       />
       <div className="main">
         <Routes>
-          <Route path="/" element={<HomePage />} />
+          <Route path="/shopping-cart/" element={<HomePage />} />
           <Route
-            path="/store"
+            path="/shopping-cart/store"
             element={<Store store={store} addCartItem={addCartItem} />}
           />
         </Routes>
